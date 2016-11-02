@@ -1,0 +1,19 @@
+<html ng-app='lecture'>
+  <head>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  </head>
+
+  <body ng-controller="HeaderController as controller">
+
+  <div ng-repeat="blog in controller.blogs">
+  <h3>{{blog.title}}</h3>
+  <p>{{blog.description}}</p>
+  </div>
+
+  <script src='main.js'></script>
+  <script src='factories/API.js'></script>
+  <script src='controllers/header.js'></script>
+  </body>
+
+</html>
