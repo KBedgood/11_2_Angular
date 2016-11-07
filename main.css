@@ -8,3 +8,14 @@ input.ng-invalid {
 	transform:scale(.5) rotate3d(10,25,10,5deg) ;
 
 }
+
+
+aside {
+	width:30%;
+	float:left;
+}
+
+main {
+	width:60%;
+	float:right;
+}

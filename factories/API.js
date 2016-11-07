@@ -7,8 +7,18 @@
       const getBlogs = function() {
           var call = $http({
               method: 'GET',
-              headers: { 'X_CSRF_TOKEN': 'N5JGY3RWWTW51XZTYVSN' },
+              headers: {'X_CSRF_TOKEN':'N5JGY3RWWTW51XZTYVSN'},
               url: 'https://tiyagencyweek.herokuapp.com/blogs'
+          });
+          return call;
+      }
+
+
+      const getSingleBlog = function(id){
+        var call = $http({
+              method: 'GET',
+              headers: {'X_CSRF_TOKEN':'N5JGY3RWWTW51XZTYVSN'},
+              url: `https://tiyagencyweek.herokuapp.com/blogs/${id}`,
           });
           return call;
       }
@@ -25,7 +35,8 @@
       return {
           getBlogs,
           saveName,
-          getName
+          getName,
+          getSingleBlog
       }
 
   });

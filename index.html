@@ -1,19 +1,33 @@
 <html ng-app='lecture'>
-  <head>
-      <link rel="stylesheet" type="text/css" href="main.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-  </head>
 
-  <body ng-controller="HeaderController as controller">
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+</head>
 
-  <div ng-repeat="blog in controller.blogs">
-  <h3>{{blog.title}}</h3>
-  <p>{{blog.description}}</p>
-  </div>
+<body>
 
-  <script src='main.js'></script>
-  <script src='factories/API.js'></script>
-  <script src='controllers/header.js'></script>
-  </body>
+    <header>
+        <H2>Jakes Website</H2>
+        <nav>
+            <ul>
+                <li><a ui-sref='home'>Home</a></li>
+            </ul>
+    </header>
+
+
+    <aside ui-view="sidebar"></aside>
+
+
+    <main ui-view="content"></main>
+
+
+
+    <script src='main.js'></script>
+    <script src='factories/API.js'></script>
+    <script src='controllers/header.js'></script>
+    <script src='controllers/SingleblogController.js'></script>
+</body>
 
 </html>
