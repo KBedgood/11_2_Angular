@@ -1,12 +1,8 @@
- <div style="margin-bottom:200px" ng-repeat="blog in controller.blogs">
-  <h3>{{blog.title}}</h3>
-
-   <a ui-sref='blogDetail({id: blog._id})'>view detail</a>
+<h2>Jakes Blogs</h2>
 
 
+<div ng-repeat="blog in controller.blogs">
 
- </div>
+	<single-blog id="{{blog._id}}"></single-blog>
 
-
-
- <button ng-click="controller.goSomewhere()">Take me somewhere...</button>
+</div>

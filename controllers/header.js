@@ -6,17 +6,10 @@
 
         let vm = this;
 
+        let blogs = API.getBlogs();
 
-        vm.goSomewhere = function(){
-            $state.go('taco');
-        }
-
-
-
-        let apiCall = API.getBlogs();
-
-        apiCall.then(function(blogs) {
-            vm.blogs = blogs.data.blogs;
+        blogs.then(function(data){
+        	vm.blogs = data.data.blogs;
         })
 
 
